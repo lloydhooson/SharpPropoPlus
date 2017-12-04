@@ -33,12 +33,12 @@ namespace SharpPropoPlus.Decoder.Ppm.Walkera
         /// <summary>
         /// 
         /// </summary>
-        public override double PpmMinPulseWidthDefault => 78.4;
+        public override double PpmMinPulseWidthDefault => 189;//78.4;
 
         /// <summary>
         /// 
         /// </summary>
-        public override double PpmMaxPulseWidthDefault => 304.8;
+        public override double PpmMaxPulseWidthDefault => 380;//304.8;
 
         /// <summary>
         /// 
@@ -108,7 +108,6 @@ namespace SharpPropoPlus.Decoder.Ppm.Walkera
             {
                 return;
             }
-
             // Cancel jitter /* Version 3.3.3 */
             width = PrevWidth[DataCount].Filter(width, PpmJitter);
             //var jitterValue = Math.Abs(PrevWidth[DataCount].Value - width);
